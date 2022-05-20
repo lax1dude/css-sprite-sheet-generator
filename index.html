@@ -53,10 +53,13 @@
 							</tr>
 							<tr>
 								<td><input type="checkbox" id="conf-out-img-name-enable" />&nbsp;<span class="check-disable">Output file name:</span>&emsp;</td>
-								<td><input type="text" disabled id="conf-out-img-name" style="width:6em;" value="sheet.png" /></td>
+								<td><input type="text" disabled id="conf-out-img-name" style="width:6em;" value="sheet.jpg" /></td>
 							</tr>
 						</tbody>
 					</table>
+					<br />
+					<p><input type="radio" id="conf-exp-type-jpg" name="exp-type" value="jpg" checked />&nbsp;<span class="check-disable">Export as JPEG&emsp;<small>Quality:&nbsp;<input type="text" id="conf-exp-jpg-quality" style="width:2em;" value="80" /></small></span></p>
+					<p><input type="radio" id="conf-exp-type-png" name="exp-type" value="png" />&nbsp;<span class="check-disable">Export as PNG</span></p>
 				</div>
 			</div>
 			<br />
@@ -64,8 +67,7 @@
 				<p style="font-size:1.5em;"><b><big>Step 3:</big></b> Render and export the map:</p>
 				<div style="padding-left:30px;font-size:1.2em;">
 					<button disabled id="render-button">Run Renderer</button>
-					<br />
-					<br />
+					<p id="loading-text"><br /></p>
 					<p style="font-size:0.9em;">Output Image:</p>
 					<div id="canvas-container" style="border:1px dashed #888888;margin:10px;display:inline-block;">
 						<canvas id="render-canvas" width="300" height="150"></canvas>
@@ -75,7 +77,7 @@
 					<br />
 					<br />
 					<p style="font-size:0.9em;">CSS Style Sheet:</p>
-					<textarea readonly rows="5" cols="50" id="stylesheet-out" style="margin:10px;max-width:calc(100% - 100px);"></textarea>
+					<textarea readonly rows="7" cols="50" id="stylesheet-out" style="margin:10px;max-width:calc(100% - 100px);white-space:pre;overflow-y:auto;"></textarea>
 					<br />
 					<button disabled id="download-stylesheet-button">Download</button>
 				</div>

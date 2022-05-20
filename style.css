@@ -21,7 +21,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-size: 1.2em;
 }
 
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
 	zoom: 1.2;
 	margin: 1px;
 }
@@ -34,7 +34,11 @@ input[type=checkbox] + .check-disable {
 	color: #AAAAAA;
 }
 
-input[type=checkbox]:checked + .check-disable {
+input[type=radio] + .check-disable {
+	color: #777777;
+}
+
+input[type=checkbox]:checked + .check-disable, input[type=radio]:checked + .check-disable {
 	color: black;
 }
 
@@ -43,4 +47,8 @@ input[type=checkbox]:checked + .check-disable {
 	padding: 0px;
 	border: 1px dashed #AAAAAA;
 	cursor: pointer;
+}
+
+#loading-text {
+	font-weight: bold;
 }
