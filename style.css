@@ -1,0 +1,46 @@
+
+body {
+	margin: 0px;
+	padding: 10px;
+	font-family: sans-serif;
+}
+
+#container {
+	width: 700px;
+	max-width: calc(90vw - 20px);
+	margin: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin: 10px 0px;
+}
+
+#browse-button {
+	font-size: 1.2em;
+}
+
+input[type=checkbox] {
+	zoom: 1.2;
+	margin: 1px;
+}
+
+input[type=text] {
+	font-family: monospace;
+}
+
+input[type=checkbox] + .check-disable {
+	color: #AAAAAA;
+}
+
+input[type=checkbox]:checked + .check-disable {
+	color: black;
+}
+
+#files-uploaded img {
+	margin: 10px;
+	padding: 0px;
+	border: 1px dashed #AAAAAA;
+	cursor: pointer;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS Sprite Sheet Generator</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Online tool to use to upload a large number of individual images and export them all as a single PNG sprite sheet and a CSS style sheet with style rules to display each image on an HTML page" />
+		<meta name="keywords" content="html, html5, css, javascript, sprite sheet, image map, icon map, generator, tool, online, converter" />
+		<meta name="author" content="LAX1DUDE" />
+		<meta property="og:title" content="CSS Sprite Sheet Generator" />
+		<meta property="og:locale" content="en-US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Online tool to use to upload a large number of individual images and export them all as a single PNG sprite sheet and a CSS style sheet with style rules to display each image on an HTML page" />
+		<!-- <meta property="og:url" content="??????" /> -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link type="image/x-icon" rel="shortcut icon" href="favicon.ico" />
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<br />
+			<h1 style="text-align:center;">CSS Sprite Sheet Generator</h1>
+			<h3 style="text-align:center;">Made by LAX1DUDE</h3>
+			<br />
+			<div id="step1-container">
+				<p style="font-size:1.5em;"><b><big>Step 1:</big></b> Select files to convert:</p>
+				<p style="padding-left:30px;"><button id="browse-button">Browse for Files</button></p>
+				<div style="padding-left:30px;" id="files-uploaded"></div>
+				<p style="padding-left:30px;"><button id="clear-selection" style="display:none;">Clear Selection</button>
+			</div>
+			<br />
+			<div id="step2-container">
+				<p style="font-size:1.5em;"><b><big>Step 2:</big></b> Configure the output file:</p>
+				<div style="padding-left:30px;font-size:1.2em;">
+					<table>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" id="conf-zoom-factor-enable" />&nbsp;<span class="check-disable">Rescale Images By:</span>&emsp;</td>
+								<td><input type="text" disabled id="conf-zoom-factor" style="width:3em;" value="1.0" /><small>&nbsp;x</small></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="conf-max-width-enable" />&nbsp;<span class="check-disable">Max Width Per Image:</span>&emsp;</td>
+								<td><input type="text" disabled id="conf-max-width" style="width:3em;" /><small>&nbsp;px</small></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="conf-max-height-enable" />&nbsp;<span class="check-disable">Max Height Per Image:</span>&emsp;</td>
+								<td><input type="text" disabled id="conf-max-height" style="width:3em;" /><small>&nbsp;px</small></td>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td><input type="checkbox" id="conf-css-prefix-enable" />&nbsp;<span class="check-disable">CSS class prefix:</span>&emsp;</td>
+								<td><input type="text" disabled id="conf-css-prefix" style="width:6em;" value="img" /></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="conf-out-img-name-enable" />&nbsp;<span class="check-disable">Output file name:</span>&emsp;</td>
+								<td><input type="text" disabled id="conf-out-img-name" style="width:6em;" value="sheet.png" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<br />
+			<div id="step3-container">
+				<p style="font-size:1.5em;"><b><big>Step 3:</big></b> Render and export the map:</p>
+				<div style="padding-left:30px;font-size:1.2em;">
+					<button disabled id="render-button">Run Renderer</button>
+					<br />
+					<br />
+					<p style="font-size:0.9em;">Output Image:</p>
+					<div id="canvas-container" style="border:1px dashed #888888;margin:10px;display:inline-block;">
+						<canvas id="render-canvas" width="300" height="150"></canvas>
+					</div>
+					<p id="render-canvas-resolution" style="padding-top:1px;font-size:0.7em;"></p>
+					<button disabled id="download-image-button">Download</button>
+					<br />
+					<br />
+					<p style="font-size:0.9em;">CSS Style Sheet:</p>
+					<textarea readonly rows="5" cols="50" id="stylesheet-out" style="margin:10px;max-width:calc(100% - 100px);"></textarea>
+					<br />
+					<button disabled id="download-stylesheet-button">Download</button>
+				</div>
+			</div>
+			<br />
+			<br />
+			<p style="text-align:center;font-size:0.8em;"><em>Copyright &copy; 2022 Calder Young. All rights reserved.</em></p>
+		</div>
+	</body>
+</html>
